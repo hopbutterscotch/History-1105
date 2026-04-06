@@ -6,14 +6,13 @@ thumbnail: images/figure_1.jpg
 summary: How a Mesoamerican crop became the defining flavor of the American Southwest—and why one plant changed everything.
 ---
 
-# Chiles: The Heat That Built the Southwest
+# Silver City: 
 
 Before the Spanish arrived, before the United States existed, before the concept of the Southwest was even imagined, there were chiles. Not the long red ristras you see hanging on gallery walls, not the hot sauces in grocery stores, not even the dried red chile sauce that defines New Mexican cooking. But *chiles*—wild, small, incredibly pungent plants that grew in what is now Mexico and Central America.
 
 The story of how this plant became the defining ingredient of Southwestern cuisine is the story of climate, conquest, adaptation, and an entire region's relationship to heat—both literal and cultural.
 
-## Wild Origins and Sacred Uses
-
+## Raton 
 {% capture chile_origins_text %}
 Archaeological evidence suggests that wild chiles were used by Mesoamerican peoples for thousands of years before domestication. Unlike staple crops like maize or beans (which were also domesticated), chiles were initially valued for medicinal and ceremonial purposes, not just food.
 
