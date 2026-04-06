@@ -1,5 +1,5 @@
 ---
-title: "Chiles: The Heat That Built the Southwest"
+title: "Boycott of the Chinese"
 layout: scrollstory
 header-image: images/figure_1.jpg
 thumbnail: images/figure_1.jpg
