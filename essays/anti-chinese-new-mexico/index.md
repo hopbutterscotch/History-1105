@@ -1,5 +1,5 @@
 ---
-title: "Ordered to Git in Territorial New Mexico Newspapers"
+title: "Chinese Ordered to 'Git' in Territorial New Mexico"
 layout: scrollstory
 header-image: images/figure_1.jpg
 thumbnail: images/figure_1.jpg
