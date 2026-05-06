@@ -1,5 +1,5 @@
 ---
-title: "“A Round-Up Among the Chinese”: A Silver City Notice and Chinese Exclusion in Territorial New Mexico"
+title: "Ordered to Git in Territorial New Mexico Newspapers"
 layout: scrollstory
 header-image: images/figure_1.jpg
 thumbnail: images/figure_1.jpg
