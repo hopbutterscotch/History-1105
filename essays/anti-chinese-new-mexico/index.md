@@ -1,12 +1,13 @@
 ---
 title: "Chinese Ordered to 'Git' in Territorial New Mexico"
 layout: scrollstory
-header-image: /History-1105/images/tom-ying-restaurant.png
+header-image: images/essays/anti-chinese-new-mexico/Images/tom-ying-restaurant.png
 thumbnail: images/Screenshot 2026-05-06 170608.png
 summary: An 1885 Silver City notice shows how newspapers made Chinese residents seem removable.
 ---
 
 #  Introduction
+
 
 On December 3, 1885, the Golden Era, a Lincoln, New Mexico, newspaper, printed a notice from Silver City: “The citizens of Silver City have had a round-up among the Chinese, and have ordered them to ‘git.’”¹ Though short, this sentence records an attempt to expel Chinese residents and uses language that implies routine action.
 
