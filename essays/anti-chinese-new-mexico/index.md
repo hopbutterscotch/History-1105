@@ -1,7 +1,7 @@
 ---
 title: "Chinese Ordered to 'Git' in Territorial New Mexico"
 layout: scrollstory
-header-image: images/tom-ying-restaurant.png
+header-image: /History-1105/images/tom-ying-restaurant.png
 thumbnail: images/Screenshot 2026-05-06 170608.png
 summary: An 1885 Silver City notice shows how newspapers made Chinese residents seem removable.
 ---
