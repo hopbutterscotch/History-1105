@@ -27,7 +27,6 @@ This sentence takes anti-Chinese hostility and puts it in the language of civic 
 
 ## A Newspaper That Could Tell Fuller Stories
 
-{% capture chile_nm_text %}
 The Golden Era knew how to tell detailed human stories. In the same issue, a report from Tularosa, named Tiburcio Duran and Anastasio Delphin, described them as “two old friends,” explained their fight, detailed wounds, mentioned the constable, and reported an armed guard around town.³ That story gives names, relationships, sequence, injury, law, and community tension.
 
 The Silver City notice gives a very different record. It omits Chinese names, work, homes, fears, property, injuries, resistance, and destination. It seems clear in the newspaper: some people receive narrative detail, but when speaking of the Chinese, they are reduced to a racial category.
