@@ -1,7 +1,7 @@
 ---
 title: "Chinese Ordered to 'Git' in Territorial New Mexico"
 layout: scrollstory
-header-image: images/lee chin.jpg
+header-image: images/tom-ying-restaurant.png
 thumbnail: images/Screenshot 2026-05-06 170608.png
 summary: An 1885 Silver City notice shows how newspapers made Chinese residents seem removable.
 ---
@@ -101,4 +101,3 @@ Bills, Garland D. “Tom Ying: The Hard Life of an Early Chinese Immigrant in Ne
 Leong, Karen J. Chapter in Unpacking Silver City, 103–166.
 
 Lew-Williams, Beth. The Chinese Must Go: Violence, Exclusion, and the Making of the Alien in America. Cambridge, MA: Harvard University Press, 2018.
----
