@@ -10,6 +10,7 @@ summary: An 1885 Silver City notice shows how newspapers made Chinese residents 
   --bg: #f4eadb;
   --paper: #fff8ec;
   --paper-soft: #f8efdf;
+  --paper-deep: #ead8bc;
   --ink: #211812;
   --ink-soft: #4e3e32;
   --muted: #7a6a5b;
@@ -18,8 +19,11 @@ summary: An 1885 Silver City notice shows how newspapers made Chinese residents 
   --copper: #9b572f;
   --copper-dark: #6d321b;
   --gold: #d9ae5f;
+  --gold-soft: #f0d8a1;
   --line: #d5bea0;
+  --line-soft: rgba(213, 190, 160, 0.55);
   --shadow: rgba(35, 22, 13, 0.16);
+  --shadow-deep: rgba(35, 22, 13, 0.24);
 }
 
 html {
@@ -30,6 +34,7 @@ body {
   background:
     radial-gradient(circle at 8% 0%, rgba(155, 87, 47, 0.18), transparent 28rem),
     radial-gradient(circle at 92% 10%, rgba(217, 174, 95, 0.18), transparent 26rem),
+    radial-gradient(circle at 50% 115%, rgba(106, 50, 27, 0.10), transparent 30rem),
     linear-gradient(180deg, #efe1cc 0%, var(--bg) 32%, #fbf6ed 100%);
   color: var(--ink);
 }
@@ -40,9 +45,20 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(42, 27, 19, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(42, 27, 19, 0.025) 1px, transparent 1px);
+    linear-gradient(rgba(42, 27, 19, 0.026) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 27, 19, 0.026) 1px, transparent 1px);
   background-size: 36px 36px;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.18), transparent 12%, transparent 88%, rgba(255,255,255,0.18)),
+    radial-gradient(circle at center, transparent 52%, rgba(42, 27, 19, 0.05));
   z-index: -1;
 }
 
@@ -59,8 +75,25 @@ main,
   line-height: 1.82;
 }
 
+.post-content::before {
+  content: "";
+  position: absolute;
+  top: 13rem;
+  bottom: 0;
+  left: -2.3rem;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, rgba(155, 87, 47, 0.38), rgba(217, 174, 95, 0.24), transparent);
+  border-radius: 999px;
+}
+
 .post-content > p {
   margin: 1.15rem 0;
+  color: var(--ink);
+}
+
+.post-content > p:hover {
+  background: rgba(255, 248, 236, 0.34);
+  box-shadow: -0.45rem 0 0 rgba(155, 87, 47, 0.12);
 }
 
 .essay-hero {
@@ -106,13 +139,25 @@ main,
 }
 
 .post-content > h1 {
+  position: relative;
   margin-top: 2rem;
-  padding-bottom: 0.7rem;
+  padding-bottom: 0.8rem;
   color: var(--brown);
   border-bottom: 4px double var(--line);
   font-size: clamp(2.1rem, 4vw, 3.2rem);
   line-height: 1.04;
   letter-spacing: -0.04em;
+}
+
+.post-content > h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.55rem;
+  width: 5.5rem;
+  height: 0.18rem;
+  background: linear-gradient(90deg, var(--copper), transparent);
+  border-radius: 999px;
 }
 
 .post-content > h1 + p::first-letter {
@@ -127,37 +172,79 @@ main,
 
 .post-content > h2 {
   position: relative;
-  margin-top: 3.25rem;
-  margin-bottom: 1.2rem;
-  padding: 1.05rem 1.2rem 1.05rem 1.35rem;
+  margin-top: 3.35rem;
+  margin-bottom: 1.25rem;
+  padding: 1.12rem 1.25rem 1.12rem 1.45rem;
   color: var(--brown);
   background:
-    linear-gradient(90deg, rgba(155, 87, 47, 0.16), rgba(255, 248, 236, 0.78)),
+    linear-gradient(90deg, rgba(155, 87, 47, 0.18), rgba(255, 248, 236, 0.86)),
+    linear-gradient(180deg, rgba(255,255,255,0.58), rgba(255,255,255,0.08)),
     var(--paper);
-  border-left: 7px solid var(--copper);
-  border-radius: 0 18px 18px 0;
-  box-shadow: 0 12px 28px rgba(35, 22, 13, 0.08);
+  border-left: 8px solid var(--copper);
+  border-radius: 0 20px 20px 0;
+  box-shadow:
+    0 14px 30px rgba(35, 22, 13, 0.09),
+    inset 0 0 0 1px rgba(255,255,255,0.52);
   font-size: clamp(1.45rem, 3vw, 2.08rem);
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
 
+.post-content > h2::before {
+  content: "";
+  position: absolute;
+  left: -1.05rem;
+  top: 50%;
+  width: 0.65rem;
+  height: 0.65rem;
+  transform: translateY(-50%);
+  background: var(--gold);
+  border: 3px solid var(--bg);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(155, 87, 47, 0.35);
+}
+
 .post-content > h2::after {
   content: "";
   position: absolute;
-  left: 1.35rem;
-  right: 1.35rem;
+  left: 1.45rem;
+  right: 1.45rem;
   bottom: 0.42rem;
   height: 1px;
-  background: linear-gradient(90deg, rgba(155, 87, 47, 0.36), transparent);
+  background: linear-gradient(90deg, rgba(155, 87, 47, 0.38), transparent);
+}
+
+.post-content > h2 + p {
+  padding: 1.15rem 1.25rem;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.72), rgba(248, 239, 223, 0.72)),
+    var(--paper-soft);
+  border: 1px solid var(--line-soft);
+  border-radius: 18px;
+  box-shadow:
+    0 12px 26px rgba(35, 22, 13, 0.08),
+    inset 0 0 0 1px rgba(255,255,255,0.55);
 }
 
 .post-content > h3 {
-  margin-top: 1.8rem;
+  position: relative;
+  margin-top: 1.9rem;
+  padding-top: 0.45rem;
   color: var(--copper-dark);
   font-size: 1.12rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.post-content > h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.2rem;
+  height: 0.18rem;
+  background: linear-gradient(90deg, var(--copper), transparent);
+  border-radius: 999px;
 }
 
 .post-content > p:nth-of-type(2),
@@ -166,26 +253,43 @@ main,
 .post-content > p:nth-of-type(23) {
   padding: 1.08rem 1.25rem;
   background:
-    linear-gradient(180deg, rgba(255,255,255,0.58), rgba(255,255,255,0.12)),
+    linear-gradient(180deg, rgba(255,255,255,0.62), rgba(255,255,255,0.14)),
     var(--paper-soft);
   border: 1px solid rgba(213, 190, 160, 0.95);
   border-radius: 18px;
-  box-shadow: 0 10px 24px rgba(35, 22, 13, 0.07);
+  box-shadow:
+    0 10px 24px rgba(35, 22, 13, 0.07),
+    inset 0 0 0 1px rgba(255,255,255,0.48);
+}
+
+.post-content > p:nth-of-type(2)::before,
+.post-content > p:nth-of-type(8)::before,
+.post-content > p:nth-of-type(16)::before,
+.post-content > p:nth-of-type(23)::before {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 0.14rem;
+  margin-bottom: 0.65rem;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  border-radius: 999px;
 }
 
 .image-card {
   position: relative;
-  margin: 2.15rem auto 2.85rem auto;
-  padding: 1rem;
+  margin: 2.25rem auto 3rem auto;
+  padding: 1.05rem;
   background:
-    linear-gradient(180deg, rgba(255,255,255,0.66), rgba(255,255,255,0.1)),
+    linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.12)),
+    radial-gradient(circle at top right, rgba(217, 174, 95, 0.16), transparent 18rem),
     var(--paper);
   border: 1px solid var(--line);
-  border-radius: 24px;
+  border-radius: 26px;
   box-shadow:
-    0 24px 48px rgba(35, 22, 13, 0.16),
-    inset 0 0 0 1px rgba(255,255,255,0.58);
+    0 26px 54px rgba(35, 22, 13, 0.17),
+    inset 0 0 0 1px rgba(255,255,255,0.62);
   text-align: center;
+  overflow: hidden;
 }
 
 .image-card::before {
@@ -193,7 +297,18 @@ main,
   position: absolute;
   inset: 12px;
   border: 1px solid rgba(155, 87, 47, 0.2);
-  border-radius: 17px;
+  border-radius: 19px;
+  pointer-events: none;
+}
+
+.image-card::after {
+  content: "";
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+  right: -5rem;
+  top: -5rem;
+  background: radial-gradient(circle, rgba(155, 87, 47, 0.14), transparent 70%);
   pointer-events: none;
 }
 
@@ -205,30 +320,39 @@ main,
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 14px;
-  box-shadow: 0 13px 28px rgba(35, 22, 13, 0.22);
-  filter: contrast(1.04) sepia(0.12);
+  border-radius: 15px;
+  box-shadow:
+    0 14px 30px rgba(35, 22, 13, 0.24),
+    0 0 0 8px rgba(255, 248, 236, 0.65);
+  filter: contrast(1.05) sepia(0.13);
 }
 
 .image-card figcaption {
   position: relative;
   z-index: 1;
   max-width: 700px;
-  margin: 0.95rem auto 0 auto;
+  margin: 1.05rem auto 0 auto;
   color: var(--muted);
   font-size: 0.95rem;
-  line-height: 1.48;
+  line-height: 1.5;
 }
 
 .image-card figcaption cite {
   display: block;
-  margin-top: 0.55rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid rgba(155, 87, 47, 0.18);
+  margin-top: 0.6rem;
+  padding: 0.65rem 0.75rem 0 0.75rem;
+  border-top: 1px solid rgba(155, 87, 47, 0.2);
   color: #76675a;
   font-size: 0.82rem;
   font-style: normal;
   line-height: 1.45;
+}
+
+.post-content > h2:nth-of-type(7) ~ p {
+  padding: 0.85rem 1rem;
+  background: rgba(255, 248, 236, 0.68);
+  border-left: 4px solid rgba(155, 87, 47, 0.42);
+  border-radius: 0 12px 12px 0;
 }
 
 em {
@@ -271,6 +395,10 @@ hr {
 }
 
 @media (max-width: 760px) {
+  .post-content::before {
+    display: none;
+  }
+
   .essay-hero {
     padding-top: 0.75rem;
   }
@@ -285,12 +413,22 @@ hr {
   }
 
   .post-content > h2 {
-    padding: 0.9rem 1rem;
+    padding: 0.95rem 1rem;
+  }
+
+  .post-content > h2::before {
+    display: none;
   }
 
   .image-card {
-    padding: 0.75rem;
+    padding: 0.78rem;
     border-radius: 18px;
+  }
+
+  .image-card img {
+    box-shadow:
+      0 10px 22px rgba(35, 22, 13, 0.20),
+      0 0 0 5px rgba(255, 248, 236, 0.68);
   }
 }
 </style>
@@ -403,8 +541,8 @@ Lew-Williams, Beth. The Chinese Must Go: Violence, Exclusion, and the Making of 
 
 ### Visual Sources
 
-Crispell Art Parlor. “Lee Chin, Las Vegas, New Mexico.” ca. 1885. Cabinet card photograph. Palace of the Governors Photo Archives, New Mexico History Museum. Accessed March 27, 2026. https://pogphotoarchives.tumblr.com/search/lee%20chin.
+Crispell Art Parlor. “Lee Chin, Las Vegas, New Mexico.” ca. 1885. Cabinet card photograph. Palace of the Governors Photo Archives, New Mexico History Museum. Accessed March 27, 2026. 
 
-Tom Ying Restaurant notice. Reproduced in Garland D. Bills, “Tom Ying: The Hard Life of an Early Chinese Immigrant in New Mexico,” La Crónica de Nuevo México, no. 119 (Fall 2023): 3. https://digitalrepository.unm.edu/cgi/viewcontent.cgi?article=1120&context=lacronica.
+Tom Ying Restaurant notice. Reproduced in Garland D. Bills, “Tom Ying: The Hard Life of an Early Chinese Immigrant in New Mexico,” La Crónica de Nuevo México, no. 119 (Fall 2023): 3. 
 
-Tom Ying portrait. Reproduced in Garland D. Bills, “Tom Ying: The Hard Life of an Early Chinese Immigrant in New Mexico,” La Crónica de Nuevo México, no. 119 (Fall 2023): 3. https://digitalrepository.unm.edu/cgi/viewcontent.cgi?article=1120&context=lacronica.
+
