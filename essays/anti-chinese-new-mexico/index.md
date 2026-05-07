@@ -57,17 +57,31 @@ summary: An 1885 Silver City notice shows how newspapers made Chinese residents 
   border-radius: 5px;
 }
 
-.image-card figcaption {
+.image-card figcaption,
+.project-hero figcaption {
   font-size: 0.9rem;
   color: #555;
   margin-top: 0.6rem;
   line-height: 1.4;
+}
+
+.image-card figcaption cite,
+.project-hero figcaption cite {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.82rem;
+  color: #666;
+  font-style: normal;
 }
 </style>
 
 <div class="project-hero">
   <h1>Chinese Ordered to 'Git' in Territorial New Mexico</h1>
   <img src="Images/tom-ying-restaurant.png" alt="Tom Ying Restaurant newspaper notice">
+  <figcaption>
+    Tom Ying’s restaurant notice shows the local business identity hidden by newspaper labels such as “the Chinese.”
+    <cite>Source: Reproduced in Garland D. Bills, “Tom Ying: The Hard Life of an Early Chinese Immigrant in New Mexico,” <em>La Crónica de Nuevo México</em>, no. 119 (Fall 2023): 3.</cite>
+  </figcaption>
   <p>An 1885 Silver City notice shows how newspapers made Chinese residents seem removable.</p>
 </div>
 
@@ -96,8 +110,11 @@ The Golden Era knew how to tell detailed human stories. In the same issue, a rep
 The Silver City notice gives a very different record. It omits Chinese names, work, homes, fears, property, injuries, resistance, and destination. It seems clear in the newspaper: some people receive narrative detail, but when speaking of the Chinese, they are reduced to a racial category.
 
 <figure class="image-card">
-  <img src="Images/lee_chin.jpg" alt="Lee Chin historical image">
-  <figcaption>Lee Chin offers a named individual contrast to newspaper language that reduced Chinese residents to a category.</figcaption>
+  <img src="Images/lee_chin.jpg" alt="Lee Chin cabinet card photograph from Las Vegas, New Mexico">
+  <figcaption>
+    Lee Chin’s ca. 1885 portrait shows a Chinese resident of Las Vegas, New Mexico, presenting himself as part of New Mexican society during the same period of anti-Chinese pressure.
+    <cite>Source: Crispell Art Parlor, “Lee Chin, Las Vegas, New Mexico,” ca. 1885, cabinet card photograph, Palace of the Governors Photo Archives, New Mexico History Museum, accessed March 27, 2026.</cite>
+  </figcaption>
 </figure>
 
 ## Deming and Socorro: Labor and Numbers
@@ -133,8 +150,11 @@ The newspapers often failed to name Chinese residents. Karen Leong’s work on C
 Garland D. Bills’ article on Tom Ying offers a story of perseverance among the Chinese. Ying became a long-term Chinese New Mexican resident and restaurant operator, though even his name, age, and early life are difficult to reconstruct.¹² Tom Ying may not have directly faced a circumstance, for example, being “rounded up”, but his importance is different: his life shows a piece of what the phrase “the Chinese” conceals: the names, businesses, movements, uncertainties, and perseverance.
 
 <figure class="image-card">
-  <img src="Images/tom_ying.png" alt="Tom Ying historical image">
-  <figcaption>Tom Ying’s story shows part of what broad labels like “the Chinese” left out: names, businesses, movement, and survival.</figcaption>
+  <img src="Images/tom_ying.png" alt="Portrait of Tom Ying">
+  <figcaption>
+    Tom Ying’s portrait gives this project a named Chinese New Mexican life behind the public category “the Chinese.”
+    <cite>Source: Reproduced in Garland D. Bills, “Tom Ying: The Hard Life of an Early Chinese Immigrant in New Mexico,” <em>La Crónica de Nuevo México</em>, no. 119 (Fall 2023): 3.</cite>
+  </figcaption>
 </figure>
 
 ## Conclusion
@@ -159,8 +179,16 @@ Sierra County Advocate (Hillsborough, NM). January 23, 1886.
 
 ### Secondary Sources
 
-Bills, Garland D. “Tom Ying: The Hard Life of an Early Chinese Immigrant in New Mexico.” La Crónica de Nuevo México, Fall 2023.
+Bills, Garland D. “Tom Ying: The Hard Life of an Early Chinese Immigrant in New Mexico.” La Crónica de Nuevo México, no. 119, Fall 2023. https://digitalrepository.unm.edu/cgi/viewcontent.cgi?article=1120&context=lacronica.
 
 Leong, Karen J. Chapter in Unpacking Silver City, 103–166.
 
 Lew-Williams, Beth. The Chinese Must Go: Violence, Exclusion, and the Making of the Alien in America. Cambridge, MA: Harvard University Press, 2018.
+
+### Visual Sources
+
+Crispell Art Parlor. “Lee Chin, Las Vegas, New Mexico.” ca. 1885. Cabinet card photograph. Palace of the Governors Photo Archives, New Mexico History Museum. Accessed March 27, 2026. https://pogphotoarchives.tumblr.com/search/lee%20chin.
+
+Tom Ying Restaurant notice. Reproduced in Garland D. Bills, “Tom Ying: The Hard Life of an Early Chinese Immigrant in New Mexico,” La Crónica de Nuevo México, no. 119 (Fall 2023): 3. https://digitalrepository.unm.edu/cgi/viewcontent.cgi?article=1120&context=lacronica.
+
+Tom Ying portrait. Reproduced in Garland D. Bills, “Tom Ying: The Hard Life of an Early Chinese Immigrant in New Mexico,” La Crónica de Nuevo México, no. 119 (Fall 2023): 3. https://digitalrepository.unm.edu/cgi/viewcontent.cgi?article=1120&context=lacronica.
