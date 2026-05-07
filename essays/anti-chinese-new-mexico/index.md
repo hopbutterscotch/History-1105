@@ -7,71 +7,276 @@ summary: An 1885 Silver City notice shows how newspapers made Chinese residents 
 ---
 
 <style>
+:root {
+  --paper: #f6efe3;
+  --paper-soft: #fbf7ef;
+  --ink: #211b16;
+  --muted: #6f6256;
+  --line: #d8c7ad;
+  --deep: #2b1f18;
+  --accent: #8a4f2b;
+  --accent-dark: #5d321d;
+  --shadow: rgba(36, 25, 15, 0.18);
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(138, 79, 43, 0.12), transparent 32rem),
+    linear-gradient(180deg, #efe3d0 0%, #fbf7ef 18%, #fbf7ef 100%);
+  color: var(--ink);
+}
+
+main,
+.page-content,
+.wrapper,
+.post-content {
+  max-width: 900px;
+}
+
+.post-content {
+  font-size: 1.08rem;
+  line-height: 1.78;
+}
+
+.post-content > p {
+  margin: 1.1rem 0;
+}
+
+.post-content > p:first-of-type::first-letter {
+  float: left;
+  font-size: 4.2rem;
+  line-height: 0.85;
+  padding: 0.15rem 0.45rem 0 0;
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
 .project-hero {
-  margin: 1.5rem auto 2.25rem auto;
-  padding: 1.25rem;
-  background: #f7f3ec;
-  border: 1px solid #d7d0c5;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  position: relative;
+  margin: 1.25rem auto 3rem auto;
+  padding: 2rem;
+  background:
+    linear-gradient(rgba(43, 31, 24, 0.72), rgba(43, 31, 24, 0.72)),
+    radial-gradient(circle at top, rgba(255,255,255,0.12), transparent 35rem),
+    var(--deep);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 22px;
+  box-shadow: 0 18px 45px var(--shadow);
   text-align: center;
+  overflow: hidden;
+}
+
+.project-hero::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(246, 239, 227, 0.26);
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.project-hero::after {
+  content: "";
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  right: -7rem;
+  top: -8rem;
+  background: radial-gradient(circle, rgba(214, 178, 120, 0.18), transparent 70%);
+  pointer-events: none;
+}
+
+.project-hero h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto 1.25rem auto;
+  color: #fff8ec;
+  font-size: clamp(2.25rem, 6vw, 4.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  text-wrap: balance;
 }
 
 .project-hero img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 760px;
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 6px;
+  border: 10px solid #efe3d0;
+  border-radius: 10px;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.35);
+  filter: contrast(1.05) sepia(0.18);
 }
 
-.project-hero h1 {
-  margin: 0 0 1rem 0;
-  line-height: 1.15;
+.project-hero figcaption {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 1rem auto 0 auto;
+  color: #efe3d0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.project-hero figcaption cite {
+  display: block;
+  margin-top: 0.45rem;
+  color: rgba(246,239,227,0.78);
+  font-style: normal;
+  font-size: 0.82rem;
 }
 
 .project-hero p {
+  position: relative;
+  z-index: 1;
   max-width: 720px;
-  margin: 1rem auto 0 auto;
-  color: #4d4a45;
-  font-size: 1rem;
+  margin: 1.25rem auto 0 auto;
+  color: #fff8ec;
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--deep);
+}
+
+h1 {
+  margin-top: 2rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 3px double var(--line);
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  position: relative;
+  margin-top: 3rem;
+  padding: 1rem 1.1rem;
+  background:
+    linear-gradient(90deg, rgba(138, 79, 43, 0.13), rgba(138, 79, 43, 0.02)),
+    var(--paper-soft);
+  border-left: 6px solid var(--accent);
+  border-radius: 0 14px 14px 0;
+  box-shadow: 0 8px 22px rgba(36, 25, 15, 0.08);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  margin-top: 1.6rem;
+  color: var(--accent-dark);
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .image-card {
-  margin: 1.5rem auto 2rem auto;
-  padding: 0.85rem;
-  background: #f7f3ec;
-  border: 1px solid #d7d0c5;
-  border-radius: 8px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+  position: relative;
+  margin: 2rem auto 2.6rem auto;
+  padding: 1rem;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.48), rgba(255,255,255,0.08)),
+    var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 16px 34px rgba(36, 25, 15, 0.14);
   text-align: center;
+}
+
+.image-card::before {
+  content: "";
+  position: absolute;
+  inset: 11px;
+  border: 1px solid rgba(138, 79, 43, 0.18);
+  border-radius: 13px;
+  pointer-events: none;
 }
 
 .image-card img {
   width: 100%;
-  max-width: 620px;
+  max-width: 640px;
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0 9px 22px rgba(36, 25, 15, 0.18);
+  filter: contrast(1.04) sepia(0.12);
 }
 
-.image-card figcaption,
-.project-hero figcaption {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 0.6rem;
-  line-height: 1.4;
+.image-card figcaption {
+  max-width: 680px;
+  margin: 0.85rem auto 0 auto;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
-.image-card figcaption cite,
-.project-hero figcaption cite {
+.image-card figcaption cite {
   display: block;
-  margin-top: 0.35rem;
-  font-size: 0.82rem;
-  color: #666;
+  margin-top: 0.45rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid rgba(138, 79, 43, 0.18);
+  color: #7b6d60;
   font-style: normal;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+em {
+  color: var(--accent-dark);
+}
+
+a {
+  color: var(--accent-dark);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+strong {
+  color: var(--accent-dark);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line), transparent);
+  margin: 2rem 0;
+}
+
+.post-content > p:nth-of-type(2),
+.post-content > p:nth-of-type(12),
+.post-content > p:nth-of-type(20) {
+  padding: 1rem 1.15rem;
+  background: rgba(246, 239, 227, 0.78);
+  border: 1px solid rgba(216, 199, 173, 0.9);
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(36, 25, 15, 0.06);
+}
+
+@media (max-width: 700px) {
+  .project-hero {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .project-hero img {
+    border-width: 6px;
+  }
+
+  .post-content {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  h2 {
+    padding: 0.85rem;
+  }
 }
 </style>
 
