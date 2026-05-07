@@ -1,7 +1,8 @@
 ---
 title: "Chinese Ordered to 'Git' in Territorial New Mexico"
 layout: scrollstory
-thumbnail: "https://hopbutterscotch.github.io/History-1105/essays/anti-chinese-new-mexico/Images/tom-ying-restaurant.png"
+header-image: "Images/tom-ying-restaurant.png"
+thumbnail: "Images/tom-ying-restaurant.png"
 summary: An 1885 Silver City notice shows how newspapers made Chinese residents seem removable.
 ---
 
@@ -78,7 +79,7 @@ main,
 .post-content::before {
   content: "";
   position: absolute;
-  top: 13rem;
+  top: 35rem;
   bottom: 0;
   left: -2.3rem;
   width: 2px;
@@ -97,45 +98,85 @@ main,
 }
 
 .essay-hero {
-  margin: 1.5rem auto 3.2rem auto;
-  padding: clamp(1rem, 4vw, 2.5rem) 0 0.5rem 0;
   position: relative;
+  min-height: clamp(430px, 62vh, 680px);
+  margin: 1.2rem auto 3.3rem auto;
+  padding: clamp(2rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  border-radius: 30px;
+  background:
+    linear-gradient(90deg, rgba(18, 10, 6, 0.92) 0%, rgba(35, 20, 12, 0.78) 42%, rgba(35, 20, 12, 0.35) 100%),
+    linear-gradient(0deg, rgba(18, 10, 6, 0.88) 0%, rgba(18, 10, 6, 0.18) 52%, rgba(18, 10, 6, 0.35) 100%),
+    url("Images/tom-ying-restaurant.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow:
+    0 30px 70px rgba(35, 22, 13, 0.34),
+    inset 0 0 0 1px rgba(255,255,255,0.18);
 }
 
 .essay-hero::before {
   content: "";
-  display: block;
-  width: 5.5rem;
-  height: 0.32rem;
-  margin-bottom: 1.2rem;
-  background: linear-gradient(90deg, var(--copper), var(--gold));
-  border-radius: 999px;
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(255, 248, 236, 0.35);
+  border-radius: 22px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.essay-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 18%, rgba(255, 232, 176, 0.25), transparent 18rem),
+    radial-gradient(circle at 90% 80%, rgba(155, 87, 47, 0.22), transparent 24rem);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.essay-hero h1,
+.essay-hero p,
+.essay-hero .hero-rule {
+  position: relative;
+  z-index: 2;
 }
 
 .essay-hero h1 {
   max-width: 900px;
   margin: 0;
-  color: var(--brown);
+  color: #fff7e8;
   font-size: clamp(3rem, 9vw, 7rem);
   line-height: 0.88;
   letter-spacing: -0.075em;
   text-wrap: balance;
+  text-shadow:
+    0 4px 20px rgba(0,0,0,0.72),
+    0 1px 2px rgba(0,0,0,0.95);
 }
 
 .essay-hero p {
   max-width: 730px;
   margin: 1.45rem 0 0 0;
-  color: var(--ink-soft);
+  color: #fff0cf;
   font-size: clamp(1.12rem, 2.2vw, 1.45rem);
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 600;
+  text-shadow:
+    0 3px 12px rgba(0,0,0,0.72),
+    0 1px 2px rgba(0,0,0,0.95);
 }
 
 .essay-hero .hero-rule {
   width: min(100%, 760px);
-  height: 1px;
+  height: 2px;
   margin-top: 1.6rem;
-  background: linear-gradient(90deg, var(--copper), rgba(155, 87, 47, 0.08), transparent);
+  background: linear-gradient(90deg, var(--gold), rgba(255, 248, 236, 0.55), transparent);
+  box-shadow: 0 0 18px rgba(217, 174, 95, 0.35);
 }
 
 .post-content > h1 {
@@ -400,7 +441,14 @@ hr {
   }
 
   .essay-hero {
-    padding-top: 0.75rem;
+    min-height: 470px;
+    padding: 1.45rem;
+    border-radius: 22px;
+    background:
+      linear-gradient(0deg, rgba(18, 10, 6, 0.9) 0%, rgba(18, 10, 6, 0.42) 68%, rgba(18, 10, 6, 0.35) 100%),
+      url("Images/tom-ying-restaurant.png");
+    background-size: cover;
+    background-position: center;
   }
 
   .essay-hero h1 {
@@ -543,6 +591,5 @@ Lew-Williams, Beth. The Chinese Must Go: Violence, Exclusion, and the Making of 
 
 Crispell Art Parlor. “Lee Chin, Las Vegas, New Mexico.” ca. 1885. Cabinet card photograph. Palace of the Governors Photo Archives, New Mexico History Museum. Accessed March 27, 2026. 
 
-Tom Ying Restaurant notice. Reproduced in Garland D. Bills, “Tom Ying: The Hard Life of an Early Chinese Immigrant in New Mexico,” La Crónica de Nuevo México, no. 119 (Fall 2023): 3. 
 
-
+Tom Ying portrait. Reproduced in Garland D. Bills, “Tom Ying: The Hard Life of an Early Chinese Immigrant in New Mexico,” La Crónica de Nuevo México, no. 119 (Fall 2023): 3. 
